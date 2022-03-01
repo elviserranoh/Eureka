@@ -51,7 +51,7 @@ public class UserEntity implements UserDetails {
 			cascade = CascadeType.ALL,
 			orphanRemoval = true
 	)
-	private List<UserPhoneEntity> phones = new ArrayList<>();
+	private List<UserPhoneEntity> phones;
 
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE, pattern = "yyyy-MM-dd")
 	@JsonFormat(pattern = "yyyy-MM-dd")
