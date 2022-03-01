@@ -43,7 +43,7 @@ Primero debes clonar el repositorio, para eso utilizas git, si aún no lo tienes
 
 una vez configurado el nombre y el email procedes a clonar el repositorio
 
-*git clone git@github.com:elviserranoh/backend_encuesta_3it.git
+*git clone https://github.com/elviserranoh/Eureka.git
 
 ```
 
@@ -66,7 +66,6 @@ Una vez descargado le das doble click y lo ejecutas, y le das en Specify locatio
 
 _Correr el proyecto_
 
-```
 Ahora que ya se tiene instalada las dependencias es hora de ejecutar el proyecto en local para eso ejecutamos el siguiente comando
 >>> gradle bootRun
 
@@ -74,7 +73,10 @@ denntro de resources db.changelog/changelog-1.0.sql, esta el esquma de la base d
 
 email: elviserranoh@gmail.com
 contrasena: 123456
-```
+
+en Authorization es importante colocar Bearer, siguiendo este ejemplo:
+Bearer token
+
 
 ## Construido con 🛠️
 
