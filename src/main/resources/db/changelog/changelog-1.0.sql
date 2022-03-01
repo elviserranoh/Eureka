@@ -30,17 +30,13 @@ INSERT INTO TB_USERS(id, name, email, password) VALUES ('69799999-0dce-4120-ad13
 --
 
 create table TB_PHONES(
-    id bigserial primary key,
+    id bigint primary key auto_increment,
     user_id uuid not null,
     number bigint not null,
     city_code int not null,
     country_code int not null,
     FOREIGN KEY (user_id) REFERENCES TB_USERS(id)
 );
-
-INSERT INTO TB_PHONES(id, user_id, number, city_code, country_code) VALUES (1, '69799999-0dce-4120-ad13-cb8e44d356b8', 4148090961, 6101, 58);
-INSERT INTO TB_PHONES(id, user_id, number, city_code, country_code) VALUES (2, '69799999-0dce-4120-ad13-cb8e44d356b8', 4249876278, 6101, 58);
-INSERT INTO TB_PHONES(id, user_id, number, city_code, country_code) VALUES (3, '69799999-0dce-4120-ad13-cb8e44d356b8', 4522049, 293, 58);
 
 --rollback DROP TABLE TB_PHONES
 

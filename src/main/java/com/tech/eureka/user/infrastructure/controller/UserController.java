@@ -67,7 +67,7 @@ public class UserController {
 
         } catch (Exception ex) {
             log.info("##### Error " + ex);
-            throw new InfrastructureException(String.format("El usuario con id %s no se puede crear", request.getName()), HttpStatus.BAD_REQUEST);
+            throw new InfrastructureException(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
 

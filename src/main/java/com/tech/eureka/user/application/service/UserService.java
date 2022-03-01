@@ -36,7 +36,7 @@ public class UserService implements IUserService {
 	@Override
 	public User save(User user) {
 
-		if(!repository.existsByEmail(user.getEmail())) {
+		if(repository.existsByEmail(user.getEmail())) {
 			throw new InfrastructureException(String.format("El email %s ya esta en uso", user.getEmail()), HttpStatus.BAD_REQUEST);
 		}
 
