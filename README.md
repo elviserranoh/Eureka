@@ -54,7 +54,7 @@ Una vez clonado el proyecto procedes abrirlo con tu IDE favorito como Eclipse, I
 
 el IDE de forma automatica procede a instalar las dependencias, o si prefieres desde el terminal puedes ejecutar
 
->>> mvnw install
+>>> gradle clean build
 
 Otra libreria que se uso es lombok, esta se debe instalar tambien en el IDE, para eso se debe descargar el .jar desde la web oficial, en la sección de Construido Con 🛠️ encontrara el enlace una vez descargado ejecutas el archivo.
 
@@ -68,8 +68,12 @@ _Correr el proyecto_
 
 ```
 Ahora que ya se tiene instalada las dependencias es hora de ejecutar el proyecto en local para eso ejecutamos el siguiente comando
->>> mvn clean verify sonar:sonar
->>> mvnw spring-boot:run
+>>> gradle bootRun
+
+denntro de resources db.changelog/changelog-1.0.sql, esta el esquma de la base de datos, hay un usuario que se inserta por defaecto para iniciar sesion.
+
+email: elviserranoh@gmail.com
+contrasena: 123456
 ```
 
 ## Construido con 🛠️
